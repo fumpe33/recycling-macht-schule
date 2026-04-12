@@ -8,137 +8,137 @@
         :root {
             --primary-green: #2e7d32;
             --accent-red: #c62828;
-            --light-bg: #f4f7f4;
-            --text-dark: #333;
+            --light-grey: #f5f5f5;
         }
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
+            color: #333;
             margin: 0;
             background-color: #ffffff;
         }
-        header {
-            background-color: var(--light-bg);
-            padding: 50px 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--primary-green);
-        }
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: auto;
             padding: 20px;
         }
-        h1 { color: var(--primary-green); margin-bottom: 5px; }
-        h2 { color: var(--accent-red); border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-top: 40px; }
-        .hero-quote { font-style: italic; color: #555; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
-        .img-placeholder { 
-            background: #e0e0e0; 
-            border: 2px dashed #bbb; 
-            height: 250px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
+        header {
+            background-color: var(--light-grey);
+            padding: 30px 20px;
             text-align: center;
-            border-radius: 5px;
+            border-bottom: 5px solid var(--primary-green);
         }
-        .info-box {
-            background: var(--light-bg);
-            padding: 25px;
+        h1 { color: var(--primary-green); margin: 0; font-size: 1.8rem; }
+        h2 { color: var(--accent-red); border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 30px; font-size: 1.4rem; }
+        .quote { font-style: italic; color: #555; margin-top: 10px; display: block; }
+        
+        /* BILD-STYLING: Optimiert für Desktop & Handy */
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
-            border-left: 10px solid var(--primary-green);
-            margin: 30px 0;
+            margin: 20px 0;
+            display: block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+
+        /* Spezial-Regel für Handys */
+        @media (max-width: 600px) {
+            img {
+                max-height: 300px; /* Begrenzt die Höhe auf dem kleinen Schirm */
+                object-fit: cover; /* Schneidet das Bild sauber zu, statt es zu quetschen */
+                width: 95%;
+                margin: 15px auto;
+            }
+            header { padding: 20px 10px; }
+            h1 { font-size: 1.5rem; }
+        }
+
+        .highlight-box {
+            background-color: var(--light-grey);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 5px solid var(--primary-green);
+        }
         footer {
             background: #222;
-            color: #eee;
+            color: white;
+            padding: 30px 20px;
             text-align: center;
-            padding: 30px;
-            margin-top: 50px;
+            font-size: 0.9rem;
         }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Recycling macht Schule e.V.</h1>
-    <p class="hero-quote">"Oder: Was steckt neben Joghurt noch im Joghurtbecher?"</p>
+    <span class="quote">"Oder: Was steckt neben Joghurt noch im Joghurtbecher?"</span>
 </header>
 
 <div class="container">
-    
-    <section id="verein">
-        <h2>Unser Verein</h2>
-        <p>Ein wichtiger Schritt für die Umweltbildung in unserer Region: Am <strong>17. März 2026</strong> wurde der Verein <strong>Recycling macht Schule e.V.</strong> offiziell von sieben engagierten Gründungsmitgliedern ins Leben gerufen.</p>
-        <p>Wir führen die erfolgreiche Arbeit des "Recycling Day"-Projekts fort und setzen uns als eigenständiger Verein für die Bildung im Bereich nachhaltige Entwicklung (BNE) ein.</p>
+
+    <section>
+        <h2>Über uns</h2>
+        <p>Am <strong>17. März 2026</strong> wurde der Verein <strong>Recycling macht Schule e.V.</strong> von sieben Gründungsmitgliedern ins Leben gerufen. Wir führen die Vision fort, Nachhaltigkeit und Technik direkt in den Schulalltag zu bringen.</p>
     </section>
 
-    <div class="grid">
-        <img src="Presse.jpg" alt="Kind an der Presse" style="width:width:100%; border-radius:8px; margin-bottom:15px;">
-        <img src="Presse2.jpg" alt="Kind an Gerät" style="width:width:100%; border-radius:8px; margin-bottom:15px;">
+    <img src="bild1.jpg" alt="Recycling Projekt an der Schule">
 
-    </div>
-
-    <section id="motivation">
+    <section>
         <h2>Motivation</h2>
         <p>Kunststoffe sind aus der heutigen Welt nicht mehr wegzudenken. In unserem Alltag sind sie omnipräsent – sie werden z. B. zur Isolation elektrischer Leiter verwendet und sind in jedem PKW, Tablet und Smartphone zu finden. Aufgrund ihrer großen Vielfalt und Eigenschaften gibt es in vielen Anwendungsgebieten keine Alternativen für Kunststoffe.</p>
-        <p>Trotz dieser Gegebenheiten besitzen Kunststoffe in der öffentlichen Wahrnehmung ein negatives Image. Besonders aus Sicht der Kinder scheint diese Gemengelage einen Widerspruch in sich darzustellen, der in unserer konsumorientierten Gesellschaft kaum eine Auflösung findet. Wir möchten einen Beitrag zum verantwortungsvollen Umgang mit Kunststoffen leisten.</p>
+        <p>Trotz dieser Gegebenheiten besitzen Kunststoffe in der öffentlichen Wahrnehmung ein negatives Image. Besonders aus Sicht der Kinder (z. B. durch Bewegungen wie Fridays for Future) scheint diese Gemengelage einen Widerspruch in sich darzustellen. Wir möchten durch die Initiierung eines Recycling Days einen Beitrag zum verantwortungsvollen Umgang mit Kunststoffen leisten.</p>
     </section>
-	
-    <section id="projekt">
-        <h2>Das Projekt: Recycling Day</h2>
-        <p>Durch einen spielerisch gestalteten Projekttag erlangen Schülerinnen ein grundlegendes Verständnis für die Kreislaufwirtschaft. An drei Stationen werden Themen eigenständig bearbeitet:</p>
+
+    <img src="bild2.jpg" alt="Schüler bei der Kunststofferkennung">
+
+    <section>
+        <h2>Das Projekt</h2>
+        <p>Durch einen spielerisch gestalteten Projekttag erlangen Schülerinnen ein grundlegendes Verständnis für die Kreislaufwirtschaft. Das Mitmachprojekt ist kindgerecht konzipiert und umfasst drei Stationen:</p>
         <ul>
-            <li><strong>Station 1:</strong> Vielfalt der Kunststoffe & Kunststofferkennung.</li>
-            <li><strong>Station 2:</strong> Vorbereitung & Behandlung des Kunststoffmülls für das Recycling.</li>
-            <li><strong>Station 3:</strong> Kunststoffrecycling & Herstellung eines neuen Formteils.</li>
+            <li><strong>1. Vielfalt der Kunststoffe & Kunststofferkennung:</strong> Was ist eigentlich Plastik?</li>
+            <li><strong>2. Vorbereitung & Behandlung:</strong> Wie wird aus Müll ein Rohstoff?</li>
+            <li><strong>3. Recycling & Herstellung:</strong> Produktion eines neuen Formteils direkt vor Ort.</li>
         </ul>
         <p>Zuvor gesammelte und gereinigte Abfälle werden gemeinsam gesichtet, aufbereitet und zu neuen Gegenständen verarbeitet.</p>
     </section>
-	
-		<div class="grid">
-		<img src="Gruppe.jpg" alt="Kinder im KUZ" style="width:width:150%; border-radius:8px; margin-bottom:15px;">
-    </div>
 
-    <section id="ziele">
-        <h2>Unsere Ziele</h2>
-        <ul>
-            <li><strong>Wissensvermittlung:</strong> Wie funktioniert Kunststoffrecycling? Lassen sich alle Kunststoffe recyceln?</li>
-            <li><strong>Nachwuchsförderung:</strong> Praxisnahes Lernen und Begeisterung für technische und wissenschaftliche Berufe wecken.</li>
-            <li><strong>Sensibilisierung:</strong> Bewusstseinsbildung für klimaschonendes, ressourceneffizientes Alltagshandeln.</li>
-            <li><strong>Kooperation:</strong> Aufbau von Partnerschaften mit Bildungsträgern und der Zivilgesellschaft.</li>
-        </ul>
-    </section>
-
-    <div class="info-box">
+    <div class="highlight-box">
         <h2>Checkliste zur Durchführung</h2>
+        <p>So bringen wir das Projekt an Ihre Schule:</p>
         <ul>
-            <li><strong>Fortbildung:</strong> Teilnahme an einer dreistündigen Einweisung in Projektinhalte und Maschinentechnik (mind. 2 Lehrkräfte pro Schule empfohlen).</li>
-            <li><strong>Terminfindung:</strong> Planung eines Projekttages oder einer Projektwoche direkt an Ihrer Schule.</li>
-            <li><strong>Logistik:</strong> Abholen der mobilen Geräte mit dem PKW oder einem E-Lastenrad.</li>
-            <li><strong>Durchführung:</strong> Umsetzung des eigenen Recycling Days vor Ort.</li>
+            <li>Teilnahme an der Fortbildung (mind. 2 Lehrkräfte empfohlen).</li>
+            <li>Einweisung in Projektinhalte und Maschinentechnik.</li>
+            <li>Terminfindung für Projekttag bzw. -woche.</li>
+            <li>Abholen der mobilen Geräte mit PKW oder E-Lastenrad.</li>
+            <li>Durchführung des eigenen Recycling Days vor Ort.</li>
         </ul>
     </div>
 
-    <section id="erfolge">
-        <h2>Auszeichnungen</h2>
-        <p>Unsere Arbeit wurde bereits mehrfach gewürdigt:</p>
+    <img src="bild3.jpg" alt="Mobile Recycling Technik">
+
+    <section>
+        <h2>Ziele & Auszeichnungen</h2>
+        <p>Wir fördern die Praxisnahe Wissensvermittlung und die Begeisterung für technische Berufe. Unsere Arbeit wurde mehrfach ausgezeichnet:</p>
         <ul>
-            <li><strong>2023:</strong> Preisträger beim Zukunftspreis für Energie, Klima, Umwelt in Sachsen.</li>
-            <li><strong>2022:</strong> Auszeichnung im Sächsischen Schulwettbewerb "Kluge Köpfe am Werk".</li>
+            <li><strong>Preisträger 2023:</strong> Zukunftspreis für Energie, Klima, Umwelt in Sachsen.</li>
+            <li><strong>Ausgezeichnet 2022:</strong> Sächsischer Schulwettbewerb "Kluge Köpfe am Werk".</li>
         </ul>
     </section>
 
 </div>
 
 <footer>
-    <p><strong>Kontakt & Impressum</strong></p>
-    <p>Recycling macht Schule e.V. | Zur alten Bäckerei | 04249 Leipzig</p>
+    <p><strong>Recycling macht Schule e.V.</strong></p>
+    <p>Zur alten Bäckerei | 04249 Leipzig</p>
     <p>E-Mail: info@recycling-macht-schule.de</p>
-    <p><small>&copy; 2026 – Gegründet am 17.03.2026 von 7 Gründungsmitgliedern.</small></p>
+    <p><small>Gegründet am 17.03.2026. Wir machen Kreislaufwirtschaft erlebbar.</small></p>
 </footer>
 
 </body>
+</html>
